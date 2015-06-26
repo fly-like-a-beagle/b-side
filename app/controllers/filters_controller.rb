@@ -1,10 +1,10 @@
 class FiltersController < ApplicationController
   def create
-    Setting.create params[:setting]
+    Filter.create params[:setting]
   end
   
   def index
-    @settings = Setting.active
-    render json: @settings.to_json
+    @filters = Filter.active
+    render json: filters.to_json
   end
 end
