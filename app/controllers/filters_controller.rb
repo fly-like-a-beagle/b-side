@@ -5,7 +5,7 @@ class FiltersController < ApplicationController
   end
   
   def index
-    @filters = Filter.active
+    @filters = Filter.all
     render json: @filters.to_json
   end
 end
