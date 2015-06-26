@@ -1,6 +1,6 @@
 class FiltersController < ApplicationController
   def create
-    Filter.create params[:setting]
+    Filter.create name: params[:name], settings: params[:settings]
     head :ok
   end
   
